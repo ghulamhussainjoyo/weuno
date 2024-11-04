@@ -88,7 +88,7 @@ export default function Page() {
               <TicketCard
                 key={index}
                 className={cn({
-                  "scale-75 md:-mx-8": index % 2 === 1,
+                  "md:scale-75 md:-mx-8": index % 2 === 1,
                 })}
               />
             ))}
@@ -127,7 +127,7 @@ export default function Page() {
             </div>
           </div>
           {/* experience the finest cuisine  */}
-          <div className=" pt-12  md:flex md:items-center md:pl-10 lg:pl-20">
+          <div className=" pt-12 md:flex md:items-center md:pl-10 lg:pl-20">
             <div className="px-5 mb-14">
               <h1 className={cn("text-4xl mr-10", playfair.className)}>
                 Create your <br className="hidden md:block" /> experience as you
@@ -135,10 +135,13 @@ export default function Page() {
               </h1>
               <button
                 style={{ marginTop: 44 }}
-                className="flex justify-between items-center px-5 space-x-20 py-[14px] 
+                className="flex justify-between items-center px-5 gap-x-20 md:gap-x-10 py-[14px] 
                 bg-gradient-to-b from-[#AD8749] to-[#DCBB75] rounded-[16px]"
               >
-                <span>Book Ticket</span>
+                <span className="block md:hidden">
+                  Book General Access Ticket
+                </span>
+                <span className="hidden md:block ">Book Ticket</span>
                 <img
                   src={"/assets/svgs/arrow-right.svg"}
                   alt="chevron-down"
@@ -153,7 +156,7 @@ export default function Page() {
                 <TicketCard
                   key={index}
                   className={cn({
-                    "scale-75 md:-mx-8": index % 2 === 1,
+                    "md:scale-75 md:-mx-8": index % 2 === 1,
                   })}
                 />
               ))}
