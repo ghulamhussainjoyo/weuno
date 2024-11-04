@@ -84,9 +84,9 @@ export default function Page() {
           {/*  */}
           {/* <div className="flex itemce overflow-x-auto snap-x snap-mandatory pl-5 gap-x-3 no-scrollbar"> */}
           <div className="flex overflow-x-auto snap-x snap-mandatory pl-5 gap-x-3 no-scrollbar">
-            {/* <div className="flex"> */}
             {Array.from({ length: 6 }).map((item, index) => (
               <TicketCard
+                key={index}
                 className={cn({
                   "scale-75 md:-mx-8": index % 2 === 1,
                 })}
@@ -151,8 +151,9 @@ export default function Page() {
             <div className="flex overflow-x-auto snap-x snap-mandatory pl-5 gap-x-3 no-scrollbar">
               {Array.from({ length: 6 }).map((item, index) => (
                 <TicketCard
+                  key={index}
                   className={cn({
-                    "": index % 2 === 1,
+                    "scale-75 md:-mx-8": index % 2 === 1,
                   })}
                 />
               ))}
